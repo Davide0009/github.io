@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura by Sandy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/aura.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="hero" id="home">
+        <h1>Aura by Sandy</h1>
+        <p>Glow With Aura</p>
+        <a href="appointment.html" class="btn">Book Now</a>
+    </div>
+
+    <div id="about">
+        <h2>About Us</h2>
+        <p>We specialize in providing luxurious beauty services to make you look and feel your best.</p>
+        <a href="learnmore.html" class="learn-more-btn">Learn More</a>
+    </div>
+
+    <div class="gallery">
+        <div class="gallery-track" id="galleryTrack">
+            <img src="./image/nails3.jpg" alt="Nails">
+            <img src="./image/Lash2.jpg" alt="Lash">
+            <img src="./image/micro.jpeg" alt="microblading">
+            <img src="./image/semi.jpeg" alt="Semi-permanent Tattos">
+            <img src="./image/pedi3.jpg" alt="pedicure">
+            <img src="./image/nails3.jpg" alt="Nails">
+            <img src="./image/Lash2.jpg" alt="Lash">
+            <img src="./image/micro.jpeg" alt="microblading">
+            <img src="./image/semi.jpeg" alt="Semi-permanent Tattos">
+            <img src="./image/pedi3.jpg" alt="pedicure">
+        </div>
+      </div>
+
+    <div id="testimonial-section">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-card">
+            <p>"The best beauty service I have ever experienced!"</p>
+            <p>- Jessica</p>
+        </div>
+        <div class="testimonial-card">
+            <p>"I felt pampered and rejuvenated. Highly recommend!"</p>
+            <p>- Michael</p>
+        </div>
+    </div>
+
+    <div id="contact-section">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    <footer>
+        <p>Follow us on social  media!</p>
+        <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href=""#>Tiktok</a></li>
+            <li><a href="#"></a></li>
+        </ul>
+        <p>&COPY; 2025 Aura by Sandy</p>
+    </footer>
+    <script>
+        const track = document.getElementById("galleryTrack");
+        const images = track.children;
+        let index = 0;
+      
+        function updateActiveImage() {
+          // Remove active class from all
+          Array.from(images).forEach(img => img.classList.remove("active"));
+      
+          // Add active class to current
+          if (images[index]) {
+            images[index].classList.add("active");
+          }
+        }
+      
+        function swipeGallery() {
+          const imageWidth = images[0].offsetWidth + 20; // image + margin
+          index++;
+      
+          if (index >= images.length / 2) {
+            index = 0;
+            track.style.transition = "none";
+            track.style.transform = `translateX(0px)`;
+            updateActiveImage();
+            void track.offsetWidth;
+            setTimeout(() => {
+              track.style.transition = "transform 0.5s ease-in-out";
+              swipeGallery();
+            }, 100);
+          } else {
+            track.style.transform = `translateX(-${index * imageWidth}px)`;
+            updateActiveImage();
+          }
+        }
+      
+        updateActiveImage(); // Initial active image
+        setInterval(swipeGallery, 2500); // Every 2.5 seconds
+      </script>
+      
+</body>
+</html>

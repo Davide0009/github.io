@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment - Aura by Sandy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #0d0d0d;
+            color: #fff;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #FFD700, #E8C547, #BFA055);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 1rem;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #FFD700;
+            border-radius: 5px;
+            background: #222;
+            color: #fff;
+            font-size: 1rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            color: #0d0d0d;
+            background: linear-gradient(135deg, #FFD700, #E8C547, #BFA055);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: 0.3s;
+            box-shadow: 0 4px 20px rgba(255, 215, 0, 1);
+            cursor: pointer;
+            border: none;
+        }
+        .btn:hover {
+            background: linear-gradient(135deg, #E8C547, #FFD700, #BFA055);
+            box-shadow: 0 6px 25px rgba(255, 215, 0, 1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Book an Appointment</h1>
+        <form action="https://getform.io/f/bmdkxyva" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="service">Select Service</label>
+            <select id="service" name="service" required>
+                <option value="">-- Choose a Service --</option>
+                <option value="microblading">Microblading</option>
+                <option value="Semi-permanent Tattos">Semi-permanent Tattos</option>
+                <option value="Lash extensions">Lash extensions</option>
+                <option value="nails">Nails</option>
+                <option value="pedicure">pedicure</option>
+            </select>
+
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="message">Additional Notes</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit" class="btn">Book Now</button>
+        </form>
+    </div>
+</body>
+</html>

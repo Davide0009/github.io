@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn More - Aura by Sandy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #0d0d0d;
+            color: #fff;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(13, 13, 13, 0.9);
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.6);
+        }
+        .menu-toggle {
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #FFD700;
+            background: none;
+            border: none;
+            outline: none;
+        }
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background: rgba(13, 13, 13, 0.95);
+            text-align: center;
+            padding: 10px 0;
+        }
+        .nav-links a {
+            display: block;
+            padding: 10px;
+            color: #D4AF37;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+        .nav-links a:hover {
+            background: #FFD700;
+            color: #0d0d0d;
+        }
+        .show {
+            display: flex;
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div class="nav-links">
+            <a href="aura.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+    <div class="container" style="margin-top: 80px;">
+        <h1>About Aura by Sandy</h1>
+        <p>
+            Aura by Sandy is a luxury beauty business dedicated to enhancing natural beauty and confidence.
+            We specialize in premium beauty services, personalized appointments, and high-quality products.
+            Our mission is to provide elegance, sophistication, and a touch of luxury to every client.
+        </p>
+        <a href="aura.html" class="btn">Back to Home</a>
+    </div>
+</body>
+</html>
